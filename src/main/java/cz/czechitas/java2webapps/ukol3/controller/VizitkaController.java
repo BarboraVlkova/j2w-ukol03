@@ -19,11 +19,11 @@ public class VizitkaController {
 
     public VizitkaController() {
         seznamVizitek = Arrays.asList(
-                new vizitka("Čert (První) Pekelný", "PEKLO s.r.o.", "Chráněné území 69", "Peklov 666", "", "666 0 666", "dopekla@sehrabe.cz", "www"),
-                new vizitka("Hedwig Snowy Owl", null, "Privet Drive 4", "Little Whinging", "", null, "owl@wizardyworld.com", "www"),
-                new vizitka("Luna Lovegood", "QUIBBLER - WARNER BROS.", "Studio Tour Drive 8", "RAVENCLAW", "", "0987 654 3210", "nargles@nobodyknows.uk", "www" ),
-                new vizitka("Newton Scamander", "FANTASTIC BEASTS", "In a Suitcase", "HUFFLEPUFF", "", "123 321 1234", "NewtonScamander@magizoologist.uk", "www"),
-                new vizitka("Dobby", "FREE ELVES", null, "- everywhere -", "", null, "dobbyisafree@elf.uk", "www")
+                new vizitka("Čert (První) Pekelný", "P.E.K.L.O", "V Pekle", "Zahrádky", "", "666 0 666", "dopekla@sehrabe.cz", "www.peklo.cz"),
+                new vizitka("Hedwig Snowy Owl", null, "Privet drive no. 4", "Picket Post Close 12", "", null, "owl@wizardyworld.com", null),
+                new vizitka("Luna Lovegood", "*** QUIBBLER ***", "Diagon Alley", "Abbots Langley", "", "0987 654 3210", "nargles@nobodyknows.uk", "www.quibbler.uk" ),
+                new vizitka("Newton Scamander", ">> FANTASTIC BEASTS <<", "Suitcase Travel", "Dunstable", "", "123 321 1234", "NewtonScamander@magizoologist.uk", "www.magizoologist.uk"),
+                new vizitka("Dobby", " FREE.....ELVES ", "Around the World", "Pewsey", "", null, "dobbyisafree@elf.uk", "www.world.com")
         );
     }
 
