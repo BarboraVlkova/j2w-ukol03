@@ -12,9 +12,8 @@
 </head>
 
 <body>
-<div class="seznam" th:each="vizitka, iterStat : ${vizitka}">
-    <a href="/detail" th:href="@{/detail(id=${iterStat.index})}">
-
+<div class="seznam">
+    <a href="/detail" th:each="vizitka, iterStat : ${vizitka}" th:href="@{/detail(id=${iterStat.index})}">
 
         <div class="vizitka">
             <div class="jmeno" th:text="${vizitka.jmeno}"> </div>

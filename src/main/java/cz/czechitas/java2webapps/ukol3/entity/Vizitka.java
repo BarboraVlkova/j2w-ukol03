@@ -1,6 +1,6 @@
 package cz.czechitas.java2webapps.ukol3.entity;
 
-public class vizitka {
+public class Vizitka {
     private String jmeno;
     private String firma;
     private String ulice;
@@ -10,10 +10,10 @@ public class vizitka {
     private String email;
     private String webovaAdresa;
 
-    public vizitka() {
+    public Vizitka() {
     }
 
-    public vizitka(String jmeno, String firma, String ulice, String obecPsc, String celaAdresa, String telefon, String email, String webovaAdresa) {
+    public Vizitka(String jmeno, String firma, String ulice, String obecPsc, String celaAdresa, String telefon, String email, String webovaAdresa) {
         this.jmeno = jmeno;
         this.firma = firma;
         this.ulice = ulice;

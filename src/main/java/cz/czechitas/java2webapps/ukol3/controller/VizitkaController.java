@@ -1,6 +1,6 @@
 package cz.czechitas.java2webapps.ukol3.controller;
 
-import cz.czechitas.java2webapps.ukol3.entity.vizitka;
+import cz.czechitas.java2webapps.ukol3.entity.Vizitka;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,15 +15,15 @@ import java.util.List;
 @Controller
 public class VizitkaController {
 
-    private final List<vizitka> seznamVizitek;
+    private final List<Vizitka> seznamVizitek;
 
     public VizitkaController() {
-        seznamVizitek = Arrays.asList(
-                new vizitka("Čert (První) Pekelný", "P.E.K.L.O", "V Pekle", "Zahrádky", "", "666 0 666", "dopekla@sehrabe.cz", "www.peklo.cz"),
-                new vizitka("Hedwig Snowy Owl", null, "Privet drive no. 4", "Picket Post Close 12", "", null, "owl@wizardyworld.com", null),
-                new vizitka("Luna Lovegood", "*** QUIBBLER ***", "Diagon Alley", "Abbots Langley", "", "0987 654 3210", "nargles@nobodyknows.uk", "www.quibbler.uk" ),
-                new vizitka("Newton Scamander", ">> FANTASTIC BEASTS <<", "Suitcase Travel", "Dunstable", "", "123 321 1234", "NewtonScamander@magizoologist.uk", "www.magizoologist.uk"),
-                new vizitka("Dobby", " FREE.....ELVES ", "Around the World", "Pewsey", "", null, "dobbyisafree@elf.uk", "www.world.com")
+        seznamVizitek = List.of(
+                new Vizitka("Čert (První) Pekelný", "P.E.K.L.O", "V Pekle", "Zahrádky", "", "666 0 666", "dopekla@sehrabe.cz", "www.peklo.cz"),
+                new Vizitka("Hedwig Snowy Owl", null, "Privet drive no. 4", "Picket Post Close 12", "", null, "owl@wizardyworld.com", null),
+                new Vizitka("Luna Lovegood", "*** QUIBBLER ***", "Diagon Alley", "Abbots Langley", "", "0987 654 3210", "nargles@nobodyknows.uk", "www.quibbler.uk" ),
+                new Vizitka("Newton Scamander", ">> FANTASTIC BEASTS <<", "Suitcase Travel", "Dunstable", "", "123 321 1234", "NewtonScamander@magizoologist.uk", "www.magizoologist.uk"),
+                new Vizitka("Dobby", " FREE.....ELVES ", "Around the World", "Pewsey", "", null, "dobbyisafree@elf.uk", "www.world.com")
         );
     }
 
@@ -34,7 +34,7 @@ public class VizitkaController {
         return modelAndView;
     }
 
-    @GetMapping("/detail")
+    @GetMapping(value = "/detail" ,params = "id")
     public ModelAndView detail(int id) {
         ModelAndView modelAndView = new ModelAndView("detail");
         modelAndView.addObject("vizitka", seznamVizitek.get(id));
